@@ -1,5 +1,6 @@
 {
   "name": "webnick/helpers",
+  "license": "MIT",
   "require": {
     "php": "^7.1",
     "ext-curl": "*"
