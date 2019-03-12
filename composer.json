@@ -1,0 +1,7 @@
+{
+  "name": "wn/libraries/helpers",
+  "require": {
+    "php": "^7.1",
+    "ext-curl": "*"
+  }
+}
