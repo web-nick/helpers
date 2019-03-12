@@ -1,5 +1,5 @@
 {
-  "name": "wn/libraries/helpers",
+  "name": "webnick/libraries/helpers",
   "require": {
     "php": "^7.1",
     "ext-curl": "*"
