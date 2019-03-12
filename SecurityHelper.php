@@ -1,6 +1,6 @@
 <?php
 
-namespace webnick\libraries\helpers;
+namespace webnick\helpers;
 
 /**
  * Class SecurityHelper helper для защиты принимаемых параметров
