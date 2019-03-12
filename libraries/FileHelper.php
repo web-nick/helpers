@@ -1,6 +1,6 @@
 <?php
 
-namespace wn\libraries\helpers;
+namespace webnick\libraries\helpers;
 
 /**
  * Class FileHelper helper для работы с файловой системой

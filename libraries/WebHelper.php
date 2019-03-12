@@ -1,6 +1,6 @@
 <?php
 
-namespace wn\libraries\helpers;
+namespace webnick\libraries\helpers;
 
 /**
  * Helper для работы с web-страницами

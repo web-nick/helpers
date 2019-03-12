@@ -1,6 +1,6 @@
 <?php
 
-namespace wn\libraries\helpers;
+namespace webnick\libraries\helpers;
 
 /**
  * Class ArrayHelper helper для работы с массивами
