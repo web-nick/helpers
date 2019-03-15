@@ -39,12 +39,15 @@ class WebHelper
      * Установить опции для curl с помощью метода curl_setopt_array()
      *
      * @param array $options
+     * @return WebHelper
      * @throws \Exception
      */
-    public function setOptions(array $options): void
+    public function setOptions(array $options): self
     {
         if (!curl_setopt_array($this->curl, $options))
             throw new \Exception('Incorrect CURL option');
+
+        return $this;
     }
 
     /**
