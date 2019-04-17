@@ -141,6 +141,16 @@ class WebHelper
     }
 
     /**
+     * Вернуть текущий ресурс curl-а
+     *
+     * @return false|resource
+     */
+    public function getCurl()
+    {
+        return $this->curl;
+    }
+
+    /**
      * Останавливает выполнение, если URL не валидный
      *
      * @param string $url
