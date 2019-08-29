@@ -12,26 +12,27 @@ class WebHelper
     protected $curl;
 
     /**
-     * @param string $url
-     * @param array $options
+     * @param string|null $url
+     * @param array       $options
      * @throws \Exception
      */
-    public function __construct(string $url, array $options = [])
+    public function __construct(string $url = null, array $options = [])
     {
-        $this->checkURL($url);
+        if ($url)
+            $this->checkURL($url);
 
         $this->curl = curl_init();
 
         $this->setOptions($options + [
-                CURLOPT_URL => $url,
-                CURLOPT_SSL_VERIFYPEER => 0,
-                CURLOPT_SSL_VERIFYHOST => 0,
+                CURLOPT_URL            => $url,
+                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYHOST => false,
                 CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_FAILONERROR => true,
+                CURLOPT_FAILONERROR    => true,
                 CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
+                CURLOPT_USERAGENT      => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36',
                 CURLOPT_CONNECTTIMEOUT => $timeout = 10,
-                CURLOPT_TIMEOUT => $timeout,
+                CURLOPT_TIMEOUT        => $timeout,
             ]);
     }
 
@@ -108,6 +109,7 @@ class WebHelper
 
         if (!$result) {
             unlink($to);
+
             return false;
         } else
             return true;
